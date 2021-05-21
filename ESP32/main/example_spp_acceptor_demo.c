@@ -583,7 +583,7 @@ static void gpio_task_example(void* arg)
 }
 
 int32_t converter_tensao(int32_t v){
-	double vl = ((double)v - 1254.8)/3.8;
+	double vl = ((double)v)/1000.0  * 264.289474 - 335.750789;
 	int32_t res = (int32_t)vl;
 	
 	return res;
